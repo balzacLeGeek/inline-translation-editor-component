@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body class="translation-editable">
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="ite">
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <h1 class="text-muted">
+          <inline-translation-editor trans-key="home.h1" trans-value="Signalement.net" trans-domain="alerte" trans-locale="fr" type="string" />
+        </h1>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3">
+          <inline-translation-editor trans-key="home.hero" trans-value="Votre système d’alertes professionnelles" trans-domain="alerte" trans-locale="fr" type="string" />
+        </h1>
+        <p class="lead">
+          <inline-translation-editor trans-key="home.intro" trans-value="Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus." trans-domain="alerte" trans-locale="fr" type="text" class="btn-element"/>
+        </p>
+        <p>
+          <a class="btn btn-lg btn-success" href="#" role="button">
+            <inline-translation-editor trans-key="actions.add" trans-value="Créer un signalement" trans-domain="alerte" trans-locale="fr" type="string"/>
+          </a>
+        </p>
+      </div>
+      <footer class="footer">
+        <p>
+          <inline-translation-editor trans-key="footer.copyright" trans-value="© Signalement 2017 - 2021" trans-domain="alerte" trans-locale="fr" type="string"/>
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
 </html>
